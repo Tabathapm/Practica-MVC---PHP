@@ -3,7 +3,7 @@
 
         // ------ Modelo para obtener las vistas -----
         protected static function obtener_vistas_modelo($vistas){
-            $listaBlanca = ["home", "client-list"];
+            $listaBlanca = ["home", "client-list", "client-new"];
 
             if (in_array($vistas, $listaBlanca)){ //Si está dentro de nuestra lista de permitidos
                 if (is_file("./vistas/contenidos/".$vistas."-view.php")){ //si encuentra este archivo
