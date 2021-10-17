@@ -3,7 +3,10 @@
 
         // ------ Modelo para obtener las vistas -----
         protected static function obtener_vistas_modelo($vistas){
-            $listaBlanca = ["home", "client-list", "client-new"];
+            $listaBlanca = ["home", "client-list", "client-new", "client-search", "clien-update", "company",
+                "item-list",  "item-new", "item-search", "item-update", "reservation-list", "reservation-new",
+                "reservation-pending", "reservation-reservation", "reservation-search", "reservation-update",
+                "user-list", "user-new", "user-search", "user-update"];
 
             if (in_array($vistas, $listaBlanca)){ //Si está dentro de nuestra lista de permitidos
                 if (is_file("./vistas/contenidos/".$vistas."-view.php")){ //si encuentra este archivo
@@ -20,3 +23,5 @@
             return $contenido;
         }
     }
+
+
